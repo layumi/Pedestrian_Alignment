@@ -6,7 +6,7 @@ The main idea is to align the pedestrian within the bboxes, and reduce the noisy
 # Visualize Results
 The left image is the input; The right image is the output of our network.
 
-When zooming in the input image, we can observe a robust transform on the output image (focusing on the human body and keeping the scale).
+When zooming in the input image (adding scale variance), we can observe a robust transform on the output image (focusing on the human body and keeping the scale).
 
 
 ![](https://github.com/layumi/Person_re-ID_stn/blob/master/gif/0018_c4s1_002351_02_zoomin.gif)
