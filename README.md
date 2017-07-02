@@ -1,4 +1,4 @@
-# Person_re-ID_stn
+# Pedestrian Alignment Network
 
 This repo is for our arXiv paper (submitting). 
 The main idea is to align the pedestrian within the bboxes, and reduce the noisy factors i.e., scale and pose variances.
