@@ -4,10 +4,12 @@ This repo is for our arXiv paper (submitting).
 The main idea is to align the pedestrian within the bboxes, and reduce the noisy factors i.e., scale and pose variances.
 
 # Visualize Results
+We conduct an extra interesting experiment:
+**When zooming in the input image (adding scale variance), how do our alignment network react?**
+
+We can observe a robust transform on the output image (focusing on the human body and keeping the scale).
+
 The left image is the input; The right image is the output of our network.
-
-When zooming in the input image (adding scale variance), we can observe a robust transform on the output image (focusing on the human body and keeping the scale).
-
 
 ![](https://github.com/layumi/Person_re-ID_stn/blob/master/gif/0018_c4s1_002351_02_zoomin.gif)
     ![](https://github.com/layumi/Person_re-ID_stn/blob/master/gif/0137_c5s1_025751_05_zoomin.gif) 
