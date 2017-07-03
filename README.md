@@ -3,17 +3,35 @@
 This repo is for our arXiv paper (submitting). 
 The main idea is to align the pedestrian within the bboxes, and reduce the noisy factors i.e., scale and pose variances.
 
+## Network Structure
+![](https://github.com/layumi/Pedestrian_Alignment/blob/master/fig2.jpg)
+For more details, you can see this [png file](https://raw.githubusercontent.com/layumi/Pedestrian_Alignment/master/PAN.png). But it is low-solution now, and I may replace it recently.
+
 ## Installation
 1.Clone this repo.
 
+	```Shell
+	git clone https://github.com/layumi/Pedestrian_Alignment.git
+	cd Pedestrian_Alignment
+	mkdir data
+	```
+    
 2.Download the pretrained model.
+I will provide GoogleDriver link here.
 
 3.Compile Matconvnet
+**(Note that I have included my Matconvnet in this repo, so you do not need to download it again.)**
 
+	You just need to uncomment and modify some lines in `gpu_compile.m` and run it in Matlab. Try it~
+
+	If you fail in compilation, you may refer to http://www.vlfeat.org/matconvnet/install/
+    
 ## Dataset
+Download [Market1501 Dataset] (http://www.liangzheng.org/Project/project_reid.html)
 
 ## Test
-Coming soon.
+1. Run `test/test_gallery_query_crazy.m` to extract the features of images in the gallery and query set. They will store in a .mat file. Then you can use it to do evaluation.
+2. Evaluate feature on the Market-1501. Run `evaluation/zzd_evaluation_res_faster.m`. You can get the following Single-query Result.
 
 ## Train
 Coming soon.
