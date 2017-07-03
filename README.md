@@ -10,21 +10,18 @@ For more details, you can see this [png file](https://raw.githubusercontent.com/
 ## Installation
 1.Clone this repo.
 
-	```Shell
 	git clone https://github.com/layumi/Pedestrian_Alignment.git
 	cd Pedestrian_Alignment
 	mkdir data
-	```
-    
+
 2.Download the pretrained model.
 I will provide GoogleDriver link here.
 
 3.Compile Matconvnet
 **(Note that I have included my Matconvnet in this repo, so you do not need to download it again.)**
 
-	You just need to uncomment and modify some lines in `gpu_compile.m` and run it in Matlab. Try it~
-
-	If you fail in compilation, you may refer to http://www.vlfeat.org/matconvnet/install/
+You just need to uncomment and modify some lines in `gpu_compile.m` and run it in Matlab. Try it~
+If you fail in compilation, you may refer to http://www.vlfeat.org/matconvnet/install/
     
 ## Dataset
 Download [Market1501 Dataset] (http://www.liangzheng.org/Project/project_reid.html)
