@@ -2,8 +2,6 @@ function train_id_net_vgg16(varargin)
 % -------------------------------------------------------------------------
 % Part 4.1: prepare the datagpu_c
 % -------------------------------------------------------------------------
-addpath('../matconvnet_itchat');
-% Load character dataset
 imdb = load('./url_data.mat') ;
 imdb = imdb.imdb;
 %imdb.images.set(1:10000) = 3;
@@ -23,11 +21,8 @@ opts.train.gpus = [2,4];
 opts.train.prefetch = false ;
 opts.train.expDir = './data/resnet52_stn_align_baseline_initial0.8_drop_0.9_1e-5_batch32' ;
 opts.train.derOutputs = {'objective', 0,'objective_local',1};
-opts.train.gamma = 0.9;
 opts.train.momentum = 0.9;
 opts.train.nesterovUpdate = true;
-%opts.train.start_your_dancing = 3;
-%opts.train.constraint = 5;
 opts.train.learningRate = [0.1*ones(1,30),0.01*ones(1,10)] ;
 opts.train.weightDecay = 0.0005;
 opts.train.numEpochs = numel(opts.train.learningRate) ;
@@ -35,7 +30,6 @@ opts.train.numEpochs = numel(opts.train.learningRate) ;
 
 % Call training function in MatConvNet
 [net,info] = cnn_train_dag2(net, imdb, @getBatch,opts) ;
-zzd_email(opts.expDir);
 % --------------------------------------------------------------------
 function inputs = getBatch(imdb,batch,opts)
 % --------------------------------------------------------------------
