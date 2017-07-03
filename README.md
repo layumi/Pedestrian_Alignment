@@ -27,7 +27,8 @@ If you fail in compilation, you may refer to http://www.vlfeat.org/matconvnet/in
 Download [Market1501 Dataset] (http://www.liangzheng.org/Project/project_reid.html)
 
 ## Test
-1. Run `test/test_gallery_query_crazy.m` to extract the features of images in the gallery and query set. They will store in a .mat file. Then you can use it to do evaluation.
+1. Run `test/test_gallery_query_base.m` and `test/test_gallery_query_align.m` to extract the image features from base brach and alignment brach. Note that you need to change the dir path in the code. They will store in a .mat file. Then you can use it to do evaluation.
+
 2. Evaluate feature on the Market-1501. Run `evaluation/zzd_evaluation_res_faster.m`. You can get the following Single-query Result.
 
 ## Train
