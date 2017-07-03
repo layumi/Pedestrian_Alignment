@@ -1,9 +1,24 @@
-# Pedestrian Alignment Network
+# Pedestrian Alignment Network for Person Re-identification
 
 This repo is for our arXiv paper (submitting). 
 The main idea is to align the pedestrian within the bboxes, and reduce the noisy factors i.e., scale and pose variances.
 
-# Visualize Results
+## Installation
+1.Clone this repo.
+
+2.Download the pretrained model.
+
+3.Compile Matconvnet
+
+## Dataset
+
+## Test
+Coming soon.
+
+## Train
+Coming soon.
+
+## Visualize Results
 We conduct an extra interesting experiment:
 **When zooming in the input image (adding scale variance), how do our alignment network react?**
 
@@ -19,6 +34,3 @@ The left image is the input; The right image is the output of our network.
 ![](https://github.com/layumi/Pedestrian_Alignment/blob/master/gif/0520_c5s1_143995_06_zoomin.gif)
     ![](https://github.com/layumi/Pedestrian_Alignment/blob/master/gif/0345_c6s1_079326_07_zoomin.gif)
     ![](https://github.com/layumi/Pedestrian_Alignment/blob/master/gif/0153_c4s1_025451_01_zoomin.gif)
-
-
-
