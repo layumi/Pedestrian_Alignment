@@ -31,8 +31,14 @@ Download [Market1501 Dataset] (http://www.liangzheng.org/Project/project_reid.ht
 
 2. Evaluate feature on the Market-1501. Run `evaluation/zzd_evaluation_res_faster.m`. You can get the following Single-query Result.
 
+| Methods               | Rank@1 | mAP    | 
+| --------              | -----  | ----   | 
+| Ours           | 82.81% | 63.35% | 
+
 ## Train
-Coming soon.
+1. Add your dataset path into `prepare_data.m` and run it. Make sure the code outputs the right image path.
+
+2. Run `train_id_net_res_market_align.m` to have fun.
 
 ## Visualize Results
 We conduct an extra interesting experiment:
