@@ -14,9 +14,11 @@ For more details, you can see this [png file](https://raw.githubusercontent.com/
 	cd Pedestrian_Alignment
 	mkdir data
 
-2.Download the pretrained model.
-I will provide GoogleDriver link here.
+2.Download the pretrained model. Put it into './data'.
 
+	cd data
+	wget http://www.vlfeat.org/matconvnet/models/imagenet-resnet-50-dag.mat
+	
 3.Compile Matconvnet
 **(Note that I have included my Matconvnet in this repo, so you do not need to download it again.)**
 
