@@ -2,7 +2,7 @@
 % It's similar to the 10-crop in the ResNet Paper.
 clear;
 addpath ..;
-netStruct = load('../data/resnet52_stn_align_baseline_initial0.8_drop0.9_1e-5_base/net-epoch-40.mat');
+netStruct = load('../data/resnet52_stn_align_baseline_initial0.8_drop0.9_1e-5_batch32/net-epoch-40.mat');
 %--------add l2 norm
 net = dagnn.DagNN.loadobj(netStruct.net);
 net.addLayer('lrn_test',dagnn.LRN('param',[4096,0,1,0.5]),{'pool5'},{'pool5n'},{});
