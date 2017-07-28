@@ -49,7 +49,7 @@ end
 query_files = dir([query_dir '*.jpg']);
 queryID = zeros(length(query_files), 1);
 queryCAM = zeros(length(query_files), 1);
-if ~exist('data/queryID_duke.mat')
+if ~exist('data/queryID.mat')
     for n = 1:length(query_files)
         img_name = query_files(n).name;
         if strcmp(img_name(1), '-') % junk images
@@ -60,8 +60,8 @@ if ~exist('data/queryID_duke.mat')
             queryCAM(n) = str2num(img_name(7));
         end
     end
-    save('data/queryID_duke.mat', 'queryID');
-    save('data/queryCAM_duke.mat', 'queryCAM');
+    save('data/queryID.mat', 'queryID');
+    save('data/queryCAM.mat', 'queryCAM');
 else
     queryID = importdata('data/queryID.mat');
     queryCAM = importdata('data/queryCAM.mat');
