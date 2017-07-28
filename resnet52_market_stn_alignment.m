@@ -2,8 +2,8 @@ function net = resnet52_market_stn_res_fine()
 
 if(~exist('net_align.mat'))
     %------------main identification stream
-    netStruct = load('/home/zzd/re_ID_gan_uts5/data/resnet52_2stream_drop0.9_baseline_batch32_gan24000_all/net_single.mat') ;
-    %netStruct = load('/home/zzd/re_ID_gan_uts5/data/res52_drop0.75_batch16_baseline/net-epoch-25.mat');
+    %netStruct = load('/home/zzd/re_ID_gan_uts5/data/resnet52_2stream_drop0.9_baseline_batch32_gan24000_all/net_single.mat') ;
+    netStruct = load('/home/zzd/re_ID_gan_uts5/data/res52_drop0.75_batch16_baseline/net-epoch-25.mat');
     net1 = dagnn.DagNN.loadobj(netStruct.net) ;
     for i = 1:numel(net1.params)
         net1.params(i).learningRate = 0;
