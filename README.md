@@ -28,6 +28,8 @@ If you fail in compilation, you may refer to http://www.vlfeat.org/matconvnet/in
 ## Dataset
 Download [Market1501 Dataset] (http://www.liangzheng.org/Project/project_reid.html)
 
+For training CUHK03, we follow the new evaluation protocol in the [CVPR2017 paper](https://github.com/zhunzhong07/person-re-ranking). It conducts a multi-shot person re-ID evaluation and only needs to run one time.
+
 ## Train
 1. Add your dataset path into `prepare_data.m` and run it. Make sure the code outputs the right image path.
 
