@@ -62,3 +62,6 @@ The left image is the input; The right image is the output of our network.
 ![](https://github.com/layumi/Pedestrian_Alignment/blob/master/gif/0520_c5s1_143995_06_zoomin.gif)
     ![](https://github.com/layumi/Pedestrian_Alignment/blob/master/gif/0345_c6s1_079326_07_zoomin.gif)
     ![](https://github.com/layumi/Pedestrian_Alignment/blob/master/gif/0153_c4s1_025451_01_zoomin.gif)
+
+## Acknowledge
+Thanks for the suggestions from Qiule Sun.
