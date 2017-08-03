@@ -20,7 +20,7 @@ For more details, you can see this [png file](https://raw.githubusercontent.com/
 	wget http://www.vlfeat.org/matconvnet/models/imagenet-resnet-50-dag.mat
 	
 3.Compile Matconvnet
-**(Note that I have included my Matconvnet in this repo, so you do not need to download it again.)**
+**(Note that I have included my Matconvnet in this repo, so you do not need to download it again. I has changed some codes comparing with the original version. For example, one of the difference is in `/matlab/+dagnn/@DagNN/initParams.m`. If one layer has params, I do not initialize it again, especially for pretrained model.)**
 
 You just need to uncomment and modify some lines in `gpu_compile.m` and run it in Matlab. Try it~
 If you fail in compilation, you may refer to http://www.vlfeat.org/matconvnet/install/
