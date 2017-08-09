@@ -18,6 +18,9 @@ end
 %---
 net.params(1).learningRate = 0.0001;
 
+% When train the basic, please umcomment the following block.
+% When train the alignment, please keep it commentted.
+%{ 
 dropoutBlock = dagnn.DropOut('rate',0.75);
 net.addLayer('dropout',dropoutBlock,{'pool5'},{'pool5d'},{});
 fc751Block = dagnn.Conv('size',[1 1 2048 751],'hasBias',true,'stride',[1,1],'pad',[0,0,0,0]);
