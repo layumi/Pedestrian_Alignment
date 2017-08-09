@@ -18,8 +18,8 @@ end
 %---
 net.params(1).learningRate = 0.0001;
 
-% When train the basic, please umcomment the following block.
-% When train the alignment, please keep it commentted.
+% When training the basic network, please umcomment the following block.
+% When training the whole network, please keep it commented.
 %{ 
 dropoutBlock = dagnn.DropOut('rate',0.75);
 net.addLayer('dropout',dropoutBlock,{'pool5'},{'pool5d'},{});
