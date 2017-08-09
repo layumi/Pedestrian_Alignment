@@ -34,9 +34,11 @@ For training CUHK03, we follow the new evaluation protocol in the [CVPR2017 pape
 1. Add your dataset path into `prepare_data.m` and run it. Make sure the code outputs the right image path.
 
 2. uncomment https://github.com/layumi/Pedestrian_Alignment/blob/master/resnet52_market.m#L23 
+
 Run `train_id_net_res_market_new.m` to pretrain the base branch.
 
 3. comment https://github.com/layumi/Pedestrian_Alignment/blob/master/resnet52_market.m#L23 
+
 Run `train_id_net_res_market_align.m` to finetune the whole net.
 
 ## Test
