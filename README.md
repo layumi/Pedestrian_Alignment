@@ -33,9 +33,11 @@ For training CUHK03, we follow the new evaluation protocol in the [CVPR2017 pape
 ## Train
 1. Add your dataset path into `prepare_data.m` and run it. Make sure the code outputs the right image path.
 
-2. Run `train_id_net_res_market_new.m` to pretrain the base branch.
+2. uncomment https://github.com/layumi/Pedestrian_Alignment/blob/master/resnet52_market.m#L23 
+Run `train_id_net_res_market_new.m` to pretrain the base branch.
 
-3. Run `train_id_net_res_market_align.m` to finetune the whole net.
+3. comment https://github.com/layumi/Pedestrian_Alignment/blob/master/resnet52_market.m#L23 
+Run `train_id_net_res_market_align.m` to finetune the whole net.
 
 ## Test
 1. Run `test/test_gallery_query_base.m` and `test/test_gallery_query_align.m` to extract the image features from base brach and alignment brach. Note that you need to change the dir path in the code. They will store in a .mat file. Then you can use it to do evaluation.
