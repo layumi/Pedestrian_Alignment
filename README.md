@@ -1,7 +1,7 @@
 # Pedestrian Alignment Network for Person Re-identification
 
 This repo is for our arXiv paper (https://arxiv.org/abs/1707.00408). 
-The main idea is to align the pedestrian within the bboxes, and reduce the noisy factors i.e., scale and pose variances.
+The main idea is to align the pedestrian within the bboxes, and reduce the noisy factors, i.e., scale and pose variances.
 
 ## Network Structure
 ![](https://github.com/layumi/Pedestrian_Alignment/blob/master/fig2.jpg)
@@ -10,17 +10,17 @@ For more details, you can see this [png file](https://raw.githubusercontent.com/
 ## Installation
 1.Clone this repo.
 
-	git clone https://github.com/layumi/Pedestrian_Alignment.git
-	cd Pedestrian_Alignment
-	mkdir data
+    git clone https://github.com/layumi/Pedestrian_Alignment.git
+    cd Pedestrian_Alignment
+    mkdir data
 
-2.Download the pretrained model. Put it into './data'.
+2.Download the pre-trained model. Put it into './data'.
 
-	cd data
-	wget http://www.vlfeat.org/matconvnet/models/imagenet-resnet-50-dag.mat
-	
+    cd data
+    wget http://www.vlfeat.org/matconvnet/models/imagenet-resnet-50-dag.mat
+    
 3.Compile Matconvnet
-**(Note that I have included my Matconvnet in this repo, so you do not need to download it again. I has changed some codes comparing with the original version. For example, one of the difference is in `/matlab/+dagnn/@DagNN/initParams.m`. If one layer has params, I will not initialize it again, especially for pretrained model.)**
+**(Note that I have included my Matconvnet in this repo, so you do not need to download it again. I have changed some codes comparing with the original version. For example, one of the difference is in `/matlab/+dagnn/@DagNN/initParams.m`. If one layer has params, I will not initialize it again, especially for pretrained model.)**
 
 You just need to uncomment and modify some lines in `gpu_compile.m` and run it in Matlab. Try it~
 (The code does not support cudnn 6.0. You may just turn off the Enablecudnn or try cudnn5.1)
@@ -44,7 +44,7 @@ Run `train_id_net_res_market_new.m` to pretrain the base branch.
 Run `train_id_net_res_market_align.m` to finetune the whole net.
 
 ## Test
-1. Run `test/test_gallery_query_base.m` and `test/test_gallery_query_align.m` to extract the image features from base brach and alignment brach. Note that you need to change the dir path in the code. They will store in a .mat file. Then you can use it to do evaluation.
+1. Run `test/test_gallery_query_base.m` and `test/test_gallery_query_align.m` to extract the image features from base branch and alignment brach. Note that you need to change the dir path in the code. They will store in a .mat file. Then you can use it to do the evaluation.
 
 2. Evaluate feature on the Market-1501. Run `evaluation/zzd_evaluation_res_faster.m`. You can get a Single-query Result around the following result.
 
@@ -54,7 +54,7 @@ Run `train_id_net_res_market_align.m` to finetune the whole net.
 
 ## Visualize Results
 We conduct an extra interesting experiment:
-**When zooming in the input image (adding scale variance), how do our alignment network react?**
+**When zooming in the input image (adding scale variance), how does our alignment network react?**
 
 We can observe a robust transform on the output image (focusing on the human body and keeping the scale).
 
