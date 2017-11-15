@@ -69,5 +69,16 @@ The left image is the input; The right image is the output of our network.
     ![](https://github.com/layumi/Pedestrian_Alignment/blob/master/gif/0345_c6s1_079326_07_zoomin.gif)
     ![](https://github.com/layumi/Pedestrian_Alignment/blob/master/gif/0153_c4s1_025451_01_zoomin.gif)
 
+## Citation
+Please cite this paper in your publications if it helps your research:
+```
+@article{zheng2017pedestrian,
+  title={Pedestrian Alignment Network for Large-scale Person Re-identification},
+  author={Zheng, Zhedong and Zheng, Liang and Yang, Yi},
+  journal={arXiv preprint arXiv:1707.00408},
+  year={2017}
+}
+```
+
 ## Acknowledge
 Thanks for the suggestions from Qiule Sun.
