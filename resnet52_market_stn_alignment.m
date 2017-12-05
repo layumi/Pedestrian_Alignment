@@ -1,7 +1,7 @@
 function net = resnet52_market_stn_res_fine()
 
 if(~exist('net_align.mat'))
-    %------------main identification stream
+    %------------main identification stream   (Base Branch in paper)
     %netStruct = load('/home/zzd/re_ID_gan_uts5/data/resnet52_2stream_drop0.9_baseline_batch32_gan24000_all/net_single.mat') ;
     netStruct = load('/home/zzd/re_ID_gan_uts5/data/res52_drop0.75_batch16_baseline/net-epoch-25.mat');
     net1 = dagnn.DagNN.loadobj(netStruct.net) ;
@@ -10,7 +10,7 @@ if(~exist('net_align.mat'))
         net1.params(i).weightDecay = 0;
     end
     net1.removeLayer('top5err');
-    %-----------local stream
+    %-----------local stream   （Alignment Branch in paper）
     net2 = resnet52_market(); %imagenet
     %remove former
     for i = 1:35
@@ -26,7 +26,7 @@ if(~exist('net_align.mat'))
     for i = 1:numel(net2.vars)
         net2.renameVar(net2.vars(i).name,sprintf('%s_local',net2.vars(i).name));
     end
-    %---------localization network
+    %---------localization network （Grid Network in paper）
     net3 = resnet52_market(); %imagenet
     %remove former
     for i = 1:140
@@ -57,6 +57,8 @@ else
     net = dagnn.DagNN.loadobj(net_struct);
 end
 
+% Add extra layer to Grid network
+% Predict 6-dim transform parameter
 l_out128 = dagnn.Conv('size',[1,1,2048,128],'pad',0,'stride',1,'hasBias',true);
 net.addLayer('l_out128', l_out128, {'local_pool5'}, {'local_pool5_128'}, {'lof128','lob128'});
 
