@@ -52,6 +52,7 @@ Run `train_id_net_res_market_align.m` to finetune the whole net.
 | --------              | -----  | ----   | 
 | Ours           | 82.81% | 63.35% | 
 
+You may find our trained model at [GoogleDrive](https://drive.google.com/open?id=1X09jnURIicQk7ivHjVkq55NHPB86hQT0)
 ## Visualize Results
 We conduct an extra interesting experiment:
 **When zooming in the input image (adding scale variance), how does our alignment network react?**
