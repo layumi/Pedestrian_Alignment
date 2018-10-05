@@ -76,7 +76,8 @@ Please cite this paper in your publications if it helps your research:
 @article{zheng2017pedestrian,
   title={Pedestrian Alignment Network for Large-scale Person Re-identification},
   author={Zheng, Zhedong and Zheng, Liang and Yang, Yi},
-  journal={TCSVT},
+  doi={10.1109/TCSVT.2018.2873599},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology},
   year={2018}
 }
 ```
