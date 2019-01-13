@@ -1,6 +1,6 @@
 # Pedestrian Alignment Network for Person Re-identification
 
-This repo is for our arXiv paper (https://arxiv.org/abs/1707.00408). 
+This repo is for our IEEE TCSVT paper (https://arxiv.org/abs/1707.00408). 
 The main idea is to align the pedestrian within the bboxes, and reduce the noisy factors, i.e., scale and pose variances.
 
 ## Network Structure
