@@ -2,6 +2,8 @@
 
 This repo is for our IEEE TCSVT paper 
 
+[[10min Intro Youtube]](https://www.youtube.com/watch?v=OJR43TzS3a8&t=41s&ab_channel=IEEETransonCircuits%26SystemforVideoTech)
+
 (ArXiv Link: https://arxiv.org/abs/1707.00408 IEEE Link: https://ieeexplore.ieee.org/document/8481710). 
 
 The main idea is to align the pedestrian within the bboxes, and reduce the noisy factors, i.e., scale and pose variances.
